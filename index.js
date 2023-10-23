@@ -1,61 +1,102 @@
-let numero = parseInt(prompt("Ingresa el primer numero"));
+const frutas = ["Manzana", "Frutillas", "kiwi"];
+const verduras = ["Zapallo", "Espinaca", "Brocoli", "papa", "tomate", "lechuga"];
 
-// declaración
-function sumar(variable1, variable2){
-    console.log("Esto es para sumar");
-    //let variable1 = parseInt(prompt("Ingresa el primer numero"));
-    //let variable2 = parseInt(prompt("Ingresa el segundo numero"));
-    
-    let resultado = variable1 + variable2;
+console.log(frutas.length);
 
-    return resultado;
-}
-/*
+console.log(frutas[3]);
+
+// agrega al final
+frutas.push('Anana');
+console.log(frutas.length);
+console.log(frutas);
+
+//agrega al incio
+frutas.unshift('Anana');
+console.log(frutas.length);
+console.log(frutas);
+
+//elimina el ultimo
+frutas.pop();
+console.log(frutas.length);
+console.log(frutas);
+
+//elimina el primero
+frutas.shift();
+console.log(frutas.length);
+console.log(frutas);
+
+//concatenar arrays
+
+const productosDeVerduleria = frutas.concat(verduras);
+console.log(productosDeVerduleria);
+
+let separar = productosDeVerduleria.join("-");
+console.log(productosDeVerduleria);
+
+
+separar = separar.split("-");
+console.log(separar);
+
+console.log(productosDeVerduleria.slice(2, 4));
+
+console.log(productosDeVerduleria.sort());
+
+const numeros = [10, 5, 95, 250, 25];
+
+console.log(numeros.sort());
+
+console.log(numeros.sort((a,b)=> a-b));
+
+
+
+
+
+/*let variable1 = parseInt(prompt("Ingresa el primer numero"));
+let variable2 = parseInt(prompt("Ingresa el segundo numero"));
+
+// declaracion
+
 function sumar(variable1, variable2){
+    //proceso
+   // console.log("Esto es para sumar");
+   // let variable1 = parseInt(prompt("Ingresa el primer numero"));
+   // let variable2 = parseInt(prompt("Ingresa el segundo numero"));
+
+    //let resultado = variable1 + variable2;
+
     return variable1 + variable2;
-}*/
+}
 
 // llamado
-let suma = sumar(numero, 5);
-let suma2 = sumar(23, -12);
 
-//alert(suma2);
-
+let suma = sumar(variable1, 5);
+//let suma2 = sumar();
 console.log(suma*2);
-console.log(suma2);
+//console.log("La suma de tus números es de= " +suma2);
 
 // arrow function
 
+//const nombreDeLaFuncion = () => {}
+
 const sumar2 = (a, b) => {
-    let resultado2 =a + b;
-    console.log("El resultado de la suma es: " + resultado2);
+    let resultado2 = a + b;
+    console.log("La suma de tus números es de = " + resultado2);
 
     return resultado2;
 }
 
-// callbacks
-const sumar3 = (a, b) => a+b;
-
-let suma3 = sumar2(numero, 20);
+let suma3 = sumar2(10, 5);
 console.log(suma3);
 
+// callbacks
+
+const sumar3 = (a, b) => a+b;
+
+let suma4 = sumar3(1000, 50);
+console.log(suma4);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*let numero = parseInt(prompt("Ingrese su edad:"));
+let numero = parseInt(prompt("Ingrese su edad:"));
 
 if (numero < 18){
     alert("no tenes acceso");
