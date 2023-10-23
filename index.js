@@ -1,78 +1,142 @@
-let numero = parseInt(prompt("Ingrese su edad:"));
+let numero = parseInt(prompt("Ingresa el primer numero"));
+
+// declaración
+function sumar(variable1, variable2){
+    console.log("Esto es para sumar");
+    //let variable1 = parseInt(prompt("Ingresa el primer numero"));
+    //let variable2 = parseInt(prompt("Ingresa el segundo numero"));
+    
+    let resultado = variable1 + variable2;
+
+    return resultado;
+}
 /*
+function sumar(variable1, variable2){
+    return variable1 + variable2;
+}*/
+
+// llamado
+let suma = sumar(numero, 5);
+let suma2 = sumar(23, -12);
+
+//alert(suma2);
+
+console.log(suma*2);
+console.log(suma2);
+
+// arrow function
+
+const sumar2 = (a, b) => {
+    let resultado2 =a + b;
+    console.log("El resultado de la suma es: " + resultado2);
+
+    return resultado2;
+}
+
+// callbacks
+const sumar3 = (a, b) => a+b;
+
+let suma3 = sumar2(numero, 20);
+console.log(suma3);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*let numero = parseInt(prompt("Ingrese su edad:"));
+
 if (numero < 18){
-    alert("no tenes permiso");
+    alert("no tenes acceso");
 } else {
     
-    if(numero > 21){
-        alert("podes pasar");
+    if (numero < 21){
+        alert("tenes que pedir permiso a tus padres");
     } else {
-        alert("pedi permiso a tus padres");
+        alert("tenes acceso");
     }
 }
 
+//else if
+
 if (numero < 18){
-    alert("no tenes permiso");
-} else if(numero > 21){
-        alert("podes pasar");
+    alert("no tenes acceso");
+} else if (numero < 21){
+        alert("tenes que pedir permiso a tus padres");
+    } else if(numero > 60) {
+        alert("no tenes acceso");
     } else {
-        alert("pedi permiso a tus padres");
+        alert("tenes acceso");
     }
 
 
-if (numero < 18){
-        alert("no tenes permiso");
-    } else if(numero==18 || numero==19 ||(numero>=21)){
-        alert("podes pasar");
-    } else{
-        alert("si sos de 20 años no podes pasar");
-    }
+if (numero < 18 || numero == 20 || numero > 60){
+    alert("no tenes acceso");
+} else if(numero == 18 || numero == 19){
+    alert("pedir permiso");
+} else {
+    alert("tenes acceso");
+}
 
-*/
-    let producto = parseInt(prompt("Ingrese codigo de producto:"));
 
-    switch(producto){
-        case 400:
-            alert("el producto es el codigo 100");
-            break;
+let producto = parseInt(prompt("Ingrese el codigo de producto:"));
 
-        case 200:
-            alert("el producto es el codigo 200");
-            break;
+switch (producto){
+    case '100':
+        alert("el producto es el codigo 100");
+        break;
 
-        case 300:
-            alert("el producto es el codigo 300");
-            break;
-        
-        default:
-            alert("producto de codigo incorrecto");
-            break;
-    }
+    case '200':
+        alert("el producto es el codigo 200");
+        break;
 
+    case '300':
+        alert("el producto es el codigo 300");
+        break; 
+
+    case '400':
+        alert("el producto es el codigo 400");
+        break;   
+    
+    default:
+        alert("reingresa tu codigo correcto");
+        break;
+}
 
 // condicion ? "parte verdadera" : "parte falsa";
 
-let resultado = numero >=18 ? alert("Es mayor de edad") : "Es menor de edad";
+let resultado = numero >= 18 ? numero*2 : "Es menor de edad";
+console.log(resultado);
 
-//Bucles FOR - WHILE - DO WHILE
+// FOR WHILE DO WHILE
 
-for (let i=0; i<11; i++){
-    console.log("El valor de i es: " + i);
+for (let i=10; i>=0; i--){
+    console.log("Numero " + i);
 }
 
-while (producto == 100){
+while(producto == 100){
     console.log("repeti producto");
-    producto = parseInt(prompt("Ingrese codigo de producto:"));
+    producto = parseInt(prompt("Ingrese el codigo de producto:"));
 }
 
-do {
-
+do{
     console.log("repeti producto");
-    producto = parseInt(prompt("Ingrese codigo de producto:"));
-} while (producto == 100);
+    producto = parseInt(prompt("Ingrese el codigo de producto:"));
+} while (producto == 100)
 
 
-/*let sephiroth = {
+let sephiroth = {
     id: 1,
     name: "Sephiroth",
     lastName: "Crescent",
