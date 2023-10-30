@@ -1,3 +1,69 @@
+// Eventos
+
+// nodo.addEventListener("tipo de evento", callback);
+
+const btn = document.querySelector("button");
+
+function random(number){
+    return Math.floor(Math.random()*(number +1));
+}
+
+btn.addEventListener("click", ()=>{
+    const color = `rgb(${random(255)} ,${random(255)} , ${random(255)})`;
+    document.body.style.backgroundColor = color;
+    
+});
+
+const inputEntrada = document.querySelector("#texto");
+const textoContenedor = document.querySelector("#pantalla");
+
+inputEntrada.addEventListener("keydown", (e)=> (textoContenedor.textContent = `Usted escribió la letra: "${e.key}"`) )
+
+
+
+
+
+
+
+
+
+
+
+
+/* let cualquiera = document.querySelector(".classNodo");
+console.log(cualquiera);
+
+let id = document.getElementById("idNodo");
+
+let clase = document.getElementsByClassName("classNodo");
+
+let name = document.getElementsByName("");
+
+
+
+let tagDiv = document.getElementsByTagName("div");
+
+//let li = createElement("li");
+
+//ul.appendChild(li);
+
+//let texto = createTextNode("Hola DOM")
+
+//tagDiv.innerHTML = "<p>Hola</p>";
+
+//clase.innerText = "Esto fue cambiado por JS";
+
+//document.write = "Hola soy el write";
+
+let ul = document.querySelector("ul");
+let animales = ["gato", "perro", "conejo", "elefante", "caballo", "jirafa", "tigre", "ballena", "Pato"];
+
+animales.forEach((animal)=>{
+    const li = document.createElement("li");
+    li.textContent = animal;
+    ul.appendChild(li);
+});
+
 const frutas = ["Manzana", "Frutillas", "kiwi"];
 const verduras = ["Zapallo", "Espinaca", "Brocoli", "papa", "tomate", "lechuga"];
 
@@ -48,10 +114,7 @@ console.log(numeros.sort());
 console.log(numeros.sort((a,b)=> a-b));
 
 
-
-
-
-/*let variable1 = parseInt(prompt("Ingresa el primer numero"));
+let variable1 = parseInt(prompt("Ingresa el primer numero"));
 let variable2 = parseInt(prompt("Ingresa el segundo numero"));
 
 // declaracion
